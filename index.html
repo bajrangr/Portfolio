@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="../portfolio/node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../portfolio/node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      font-family: Aeonik, sans-serif;
+      box-sizing: border-box;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+    }
+    .hero {
+      height: 100vh;
+      width: 100%;
+      background-image: url(../portfolio/public/Images/pic-bg.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 45px;
+      padding-left: 8%;
+      padding-right: 8%;
+    }
+    .logo {
+      color: white;
+      font-size: 35px;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    span {
+      color: rgb(255, 208, 0);
+    }
+    nav ul li {
+      list-style-type: none;
+      display: inline-block;
+      padding: 20px 25px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      text-transform: capitalize;
+      letter-spacing: 0.5px;
+    }
+    nav ul li a:hover {
+      color: rgb(255, 208, 0);
+      transition: 0.4s;
+    }
+    .btn {
+      background-color: rgb(255, 208, 0);
+      color: black;
+      text-decoration: none;
+      border: 1px solid transparent;
+      font-weight: bold;
+      padding: 10px 25px;
+      transition: transform 0.4s;
+      border-radius: 30px;
+    }
+    .btn:hover {
+      background-color: transparent;
+      border: 2px solid rgb(255, 208, 0);
+      cursor: pointer;
+      color: white;
+    }
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 8%;
+      transform: translateY(-50%);
+    }
+    h1 {
+      color: white;
+      margin: 20px 0px 20px;
+      font-size: 80px;
+      font-weight: bold;
+      text-shadow: 5px 1px 6px rgb(34, 34, 34);
+    }
+    h2 {
+      color: white;
+      margin-bottom: 50px;
+      font-size: 50px;
+    }
+    .newsletter form {
+      width: 380px;
+      max-width: 100%;
+      position: relative;
+    }
+    .newsletter form input:first-child {
+      display: inline-block;
+      width: 100%;
+      padding: 14px 130px 15px 25px;
+      border: 4px solid rgb(255, 208, 0);
+      border-radius: 30px;
+    }
+    .newsletter form input:last-child {
+      position: absolute;
+      display: inline-block;
+      outline: none;
+      border: none;
+      padding: 10px 30px;
+      background-color: rgb(255, 208, 0);
+      top: 8px;
+      right: 8px;
+      border-radius: 30px;
+    }
+    .about {
+      width: 100%;
+      padding: 100px 0px;
+      background-color: black;
+    }
+    .about img {
+      height: auto;
+      width: 330px;
+    }
+    .about-text {
+      width: 550px;
+    }
+    .main {
+      width: 1130px;
+      max-width: 95%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+    .about-text h2 {
+      color: white;
+      font-size: 75px;
+      text-transform: capitalize;
+      margin-bottom: 20px;
+    }
+    .about-text h5 {
+      color: white;
+      letter-spacing: 0.5px;
+      font-size: 20px;
+      margin-bottom: 25px;
+      text-transform: capitalize;
+    }
+    .about-text p {
+      color: white;
+      letter-spacing: 0.5px;
+      line-height: 28px;
+      font-size: 18px;
+      margin-bottom: 45px;
+    }
+    button {
+      background-color: rgb(255, 208, 0);
+      color: black;
+      text-decoration: none;
+      border: 2px solid transparent;
+      font-weight: bold;
+      padding: 13px 30px;
+      border-radius: 30px;
+      transition: 0.4s;
+    }
+    button:hover {
+      background-color: transparent;
+      border: 2px solid rgb(255, 208, 0);
+      cursor: pointer;
+      color: white;
+    }
+    .service {
+      background: black;
+      width: 100%;
+      padding: 100px 0px;
+    }
+    .title h2 {
+      color: white;
+      font-size: 75px;
+      width: 1130px;
+      margin: 30px auto;
+      text-align: center;
+    }
+    .box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 400px;
+    }
+    .card {
+      height: 365px;
+      width: 335px;
+      padding: 20px 35px;
+      background: rgb(34, 34, 34);
+      border-radius: 20px;
+      margin: 15px;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+    .card i {
+      font-size: 50px;
+      display: block;
+      text-align: center;
+      padding: 10px 5px;
+      color: rgb(255, 208, 0);
+    }
+    h5 {
+      color: white;
+      font-size: 23px;
+      margin-bottom: 15px;
+    }
+    .para p {
+      color: white;
+      font-size: 16px;
+      line-height: 27px;
+      margin-bottom: 25px;
+    }
+    .card .button {
+      background-color: rgb(255, 208, 0);
+      color: black;
+      text-decoration: none;
+      border: 2px solid transparent;
+      font-weight: bold;
+      padding: 9px 22px;
+      border-radius: 30px;
+      transition: 0.4s;
+    }
+    .card .button:hover {
+      background-color: transparent;
+      border: 2px solid rgb(255, 208, 0);
+      cursor: pointer;
+      color: white;
+    }
+    .contact-me {
+      width: 100%;
+      height: 350px;
+      background: black;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .contact-me h2 {
+      color: white;
+      font-size: 65px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      margin-top: -15px;
+    }
+    .para-1 {
+      color: white;
+      text-align: center;
+      font-size: 20px;
+      margin-bottom: -5px;
+      margin-top: 20px;
+    }
+    .button-two {
+      background-color: rgb(255, 208, 0);
+      color: black;
+      text-decoration: none;
+      border: 2px solid transparent;
+      font-weight: bold;
+      padding: 9px 22px;
+      border-radius: 30px;
+      transition: 0.4s;
+      margin-top: 50px;
+    }
+    .button-two:hover {
+      background-color: transparent;
+      border: 2px solid rgb(255, 208, 0);
+      cursor: pointer;
+      color: white;
+    }
+    footer {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      background: #191919;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    footer .end {
+      font-size: 18px;
+      color: white;
+      margin-top: 50px;
+      margin-bottom: 5px;
+      letter-spacing: 0.5px;
+    }
+    .social {
+      display: flex;
+    }
+    .social a {
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgb(255, 208, 0);
+      color: black;
+      border-radius: 50%;
+      margin: 22px 10px;
+    }
+    .social a:hover {
+      background-color: transparent;
+      border: 2px solid rgb(255, 208, 0);
+      cursor: pointer;
+      color: white;
+    }
+  </style>
+  <body>
+    <header>
+      <div class="hero">
+        <nav>
+          <h2 class="logo">br<span>.studios</span></h2>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Skills</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+          <a href="#" class="btn">Subscribe</a>
+        </nav>
+
+        <div class="content">
+          <h1>I'm Bajrang <span>Rahul</span></h1>
+          <h2>Web Developer</h2>
+          <div class="newsletter">
+            <form>
+              <input
+                type="email"
+                name="email"
+                id="mail"
+                placeholder="Enter your mail ID"
+              />
+              <input type="submit" name="submit" value="Let's Start" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="about">
+      <div class="main">
+        <img src="../portfolio/public/Images/pic.jpg" />
+        <div class="about-text">
+          <h2>About Me</h2>
+          <h5>Developer <span>& Designer</span></h5>
+          <p>
+            I am a full-stack UI Developer. I can provide clean code and pixel
+            perfect design. I also make the website more & more attractive with
+            web animations. A responisve design makes your website accessible to
+            all users, regardless of their device.
+          </p>
+          <button type="button">Let's Talk</button>
+        </div>
+      </div>
+
+      <div class="service">
+        <div class="title">
+          <h2>Our Services</h2>
+        </div>
+
+        <div class="box">
+          <div class="card">
+            <i class="bi bi-list"></i>
+            <h5>Web Development</h5>
+            <div class="para">
+              <p>
+                Every website should be built with two primarily goals: Firstly,
+                it needs to work across all devices. Secondly, it needs to be
+                fast as possible.
+              </p>
+              <p style="text-align: center">
+                <a href="#" class="button">Read Me</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <i class="bi bi-person"></i>
+            <h5>Web Development</h5>
+            <div class="para">
+              <p>
+                Every website should be built with two primarily goals: Firstly,
+                it needs to work across all devices. Secondly, it needs to be
+                fast as possible.
+              </p>
+              <p style="text-align: center">
+                <a href="#" class="button">Read Me</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <i class="bi bi-bell"></i>
+            <h5>Web Development</h5>
+            <div class="para">
+              <p>
+                Every website should be built with two primarily goals: Firstly,
+                it needs to work across all devices. Secondly, it needs to be
+                fast as possible.
+              </p>
+              <p style="text-align: center">
+                <a href="#" class="button">Read Me</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-me">
+        <h2>Let's jump on a quick call</h2>
+        <p class="para-1">
+          Ask me any questions you might have or just <br />drop me a message to
+          say hello :)
+        </p>
+        <a href="#" class="button-two">SEND EMAIL</a>
+      </div>
+    </section>
+    <footer>
+      <p class="end">Copyright &copy; brc.studios.com</p>
+      <div class="social">
+        <a href="#"><i class="bi bi-behance"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-dribbble"></i></a>
+      </div>
+    </footer>
+  </body>
+</html>
